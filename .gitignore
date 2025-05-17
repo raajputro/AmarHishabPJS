@@ -1,0 +1,11 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+*.png
+/tests/
+tests-examples/demo-todo-app.spec.js
+tests-examples/example.spec.js
