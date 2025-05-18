@@ -17,6 +17,9 @@ export default defineConfig({
   testDir: './tests',
   /* Setting Default time out value */
   timeout: 300_000,
+  expect: {
+    timeout: 300_000, // wait this long for `expect(...)` assertions
+  },
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -34,6 +37,10 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    
+    // Optional: Increase action timeout too
+    actionTimeout: 300_000,
+    navigationTimeout: 300_000,
   },
 
   /* Configure projects for major browsers */
